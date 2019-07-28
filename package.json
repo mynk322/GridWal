@@ -1,0 +1,16 @@
+{
+  "name": "walpapr",
+  "version": "1.0.0",
+  "description": "Wallpaper searching app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayank Padia",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}

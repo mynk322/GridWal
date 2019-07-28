@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>GridWal</title>
+    <meta name="viewport" content="width:device-width, initial-scale=1" />
+    <link href="GridWal.css" type="text/css" rel="stylesheet" media="all" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     <style type="text/css">
+  	.padd{
+      padding:10px;
+      padding: 0 100 0 100px;
+  	}
+  	.deep{
+  		background-color: #7F64A9;
+  	}
+        body {
+  		padding: 80px;
+      background: linear-gradient(to left, #660033 0%, #ff6699 100%);
+            margin: 0;
+        }
+  </style>
+</head>
+
+<body >
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-picture"></i>     		GridWal</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class=""><a href="">Home</a></li>
+    </ul>
+    <form class="form-inline padd" action="/results" method="GET">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" size="80" autocomplete="off">
+      <button class="btn btn-outline-success my-2 my-sm-0 " type="submit" formaction="/results">Search</button>
+    </form>
+
+  </div>
+</nav>
+
+
+    <div class="flexbin flexbin-margin">
+    <% data["hits"].forEach(function(wallpaper){ %>
+            
+            <a href=<%= wallpaper["largeImageURL"]  %> >
+                <img src=<%=  wallpaper["webformatURL"]  %> >
+            </a>
+          <%})%>
+    </div>
+</body>
+
+</html>
