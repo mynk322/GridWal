@@ -28,5 +28,3 @@ $ node server.js
 
 4. Go to localhost:3000.
 
-# Features
-
