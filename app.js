@@ -16,7 +16,7 @@ app.get("/results", function(req, res) {
     var query = (req.query.search);
     if (query == null)
         query = "ocean";
-    var url = "https://pixabay.com/api/?key=13153674-80071c4a62992b203b9a7e050&q=" + query + "&image_type=all&pretty=true"
+    var url = "https://pixabay.com/api/?key=13153674-80071c4a62992b203b9a7e050&q=" + query + "&image_type=all&pretty=true&per_page=200"
     request(url, function(error, responce, body) {
         if (!error) {
             var data = JSON.parse(body);
